@@ -4,6 +4,7 @@
 
 ### dotenv ###
 .env
+.env.dev
 
 ### Node ###
 # Logs
