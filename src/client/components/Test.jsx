@@ -1,19 +1,22 @@
 import React, { Component } from 'react';
-import './app.css';
-import ReactImage from './react.png';
+import axios from 'axios';
+import '../app.css';
+import ReactImage from '../react.png';
 
-export default class App extends Component {
+export default class Test extends Component {
   constructor() {
     super();
     this.state = { username: '' };
   }
-  // state = { username: null };
 
   componentDidMount() {
-    fetch('/api/getusername')
-      .then(res => res.json())
-      .then(user => this.setState({ username: user.username }));
+    this.getUserName();
   }
+
+  getUserName = async () => {
+    const { data } = await axios.get('/api/getusername');
+    this.setState({ username: data.username });
+  };
 
   render() {
     const { username } = this.state;
