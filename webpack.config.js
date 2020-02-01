@@ -69,7 +69,7 @@ module.exports = {
     proxy: {
       '/api': 'http://localhost:8080',
     },
-    historyApiFallback: true,
+    // historyApiFallback: true,
   },
   // externals: [nodeExternals()],
   devtool: 'inline-source-map',
