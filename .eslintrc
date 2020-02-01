@@ -24,7 +24,8 @@
     "no-param-reassign": "off",
     "react/sort-comp": "off",
     "linebreak-style": 0,
-    "arrow-parens": 0
+    "arrow-parens": 0,
+    "react/prefer-stateless-function": 0
   },
   "env": {
     "browser": true,
