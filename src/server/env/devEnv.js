@@ -1,4 +1,4 @@
-const path = `${__dirname}/./../../../dev.env`;
+const path = `${__dirname}/./../../../.env.dev`;
 require('dotenv').config({ path });
 
 const dbConfig = {
