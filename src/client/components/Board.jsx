@@ -1,1 +1,1 @@
-export default () => 'Board!!ㅁㅁ!';
+export default () => 'Board!! !';
