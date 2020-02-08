@@ -135,4 +135,9 @@ sketch
 # Ignore all local history of files
 .history
 
+###lock file
+package-lock.json
+yarn.lock
+
 # End of https://www.gitignore.io/api/node,react,dotenv,visualstudiocode
+
