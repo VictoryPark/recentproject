@@ -1,6 +1,10 @@
 import React from 'react';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
-import { Header, Main, Details, Board, Test } from './components';
+import { Details, Board, Test } from './components';
+
+import Header from './components/template/header/Header';
+import Main from './components/main/Main';
+import Footer from './components/template/footer/Footer';
 
 export default () => (
   <BrowserRouter>
@@ -10,5 +14,6 @@ export default () => (
     <Route path="/board" component={Board} />
     <Route path="/details" component={Details} />
     <Route path="/test" component={Test} />
+    <Footer />
   </BrowserRouter>
 );
