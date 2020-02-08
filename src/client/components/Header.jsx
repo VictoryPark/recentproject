@@ -17,6 +17,9 @@ const Header = () => (
       <li>
         <Link to="/test">Test</Link>
       </li>
+      <li>
+        <Link to="/ui">Ui</Link>
+      </li>
     </ul>
   </Grid>
 );
