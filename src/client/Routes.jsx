@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter,
+  HashRouter,
   Route,
   Redirect,
   Switch,
@@ -14,7 +14,7 @@ import Footer from './components/template/footer/Footer';
 import { DefaultLayout } from './containers';
 
 export default () => (
-  <BrowserRouter>
+  <HashRouter>
     <Header />
     <Switch>
       <Redirect exact from="/" to="/main" />
@@ -26,5 +26,5 @@ export default () => (
     <Footer />
 
     <Route path="/ui" component={DefaultLayout} />
-  </BrowserRouter>
+  </HashRouter>
 );
