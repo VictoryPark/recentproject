@@ -1,7 +1,12 @@
 import React from 'react';
-import { HashRouter, Route, Redirect } from 'react-router-dom';
+import {
+  HashRouter,
+  Route,
+  Redirect,
+  Switch,
+} from 'react-router-dom';
 
-import { Board, Test } from './components';
+import { Posts, Test, Products } from './components';
 
 import Header from './components/template/header/Header';
 import Main from './components/main/Main';
@@ -11,11 +16,13 @@ import { DefaultLayout } from './containers';
 export default () => (
   <HashRouter>
     <Header />
-    <Redirect exact from="/" to="/main" />
-    <Route exact path="/main" component={Main} />
-    <Route path="/board" component={Board} />
-    <Route path="/test" component={Test} />
-
+    <Switch>
+      <Redirect exact from="/" to="/main" />
+      <Route exact path="/main" component={Main} />
+      <Route path="/test" component={Test} />
+      <Route path="/products" component={Products} />
+      <Route path="/post" component={Posts} />
+    </Switch>
     <Footer />
 
     <Route path="/ui" component={DefaultLayout} />

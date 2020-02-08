@@ -25,6 +25,8 @@ const PAGES = {
         title: 'Recent 정보',
         href: '/company/about-us',
       },
+      { title: '자료실', href: '/post' },
+      { title: '테스트', href: '/test' },
     ],
   },
 };
