@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
-class Posts extends React.Component {
-  state = {
-    isLoading: true,
-    posts: [],
-  };
+class Posts extends Component {
+  constructor() {
+    super();
+    this.state = {
+      isLoading: true,
+      posts: [],
+    };
+  }
 
   getPosts = async () => {
     const { data } = await axios.get('/api/posts');
@@ -21,7 +24,7 @@ class Posts extends React.Component {
     return (
       <>
         {isLoading ? (
-          'loding'
+          'loading'
         ) : (
           <div>
             {posts.map(post => (

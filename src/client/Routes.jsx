@@ -11,6 +11,6 @@ export default () => (
     <Route path="/board" component={Board} />
     <Route path="/details" component={Details} />
     <Route path="/test" component={Test} />
-    <Route path="/ui" component={DefaultLayout}/>
+    <Route path="/ui" component={DefaultLayout} />
   </BrowserRouter>
 );
