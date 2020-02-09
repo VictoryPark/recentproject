@@ -27,13 +27,13 @@ const useStyles = makeStyles({
 });
 
 const MenuList = ({ menu }) => {
-  const Icon = menu.icon;
+  // const Icon = menu.icon;
   const classes = useStyles();
 
   return (
     <Card className={classes.card}>
       <CardContent>
-        <Icon />
+        {/* <Icon /> */}
         <Typography
           variant="h5"
           component="h2"

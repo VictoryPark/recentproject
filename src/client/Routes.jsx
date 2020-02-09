@@ -6,7 +6,7 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import { Posts, Test, Products } from './components';
+import { Posts, Test, Products, Login } from './components';
 
 import Header from './components/template/header/Header';
 import Main from './components/main/Main';
@@ -18,6 +18,7 @@ export default () => (
     <Header />
     <Switch>
       <Redirect exact from="/" to="/main" />
+      <Route exact path="/login" component={Login} />
       <Route exact path="/main" component={Main} />
       <Route path="/test" component={Test} />
       <Route path="/products" component={Products} />

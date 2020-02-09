@@ -2,7 +2,7 @@ import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import { NavLink } from 'react-router-dom';
 import LanguageButton from './LanguageButton';
-import PAGES from '../../../stores/constant/template/footer/pages';
+import PAGES from '../../../constants/footerList';
 
 const FooterMenuBottom = () => {
   return (
@@ -22,7 +22,9 @@ const FooterMenuBottom = () => {
                   )
                   .map(link => {
                     return (
-                      <NavLink to={link.href}>{link.title}</NavLink>
+                      <NavLink key={link.href} to={link.href}>
+                        {link.title}
+                      </NavLink>
                     );
                   })}
                 여러 가지 상표에 대한 소유권은 각 소유자에게 있습니다.
@@ -42,7 +44,9 @@ const FooterMenuBottom = () => {
                 .filter(m => m.href !== '/company/legal/intellectual')
                 .map(link => {
                   return (
-                    <NavLink to={link.href}>{link.title}</NavLink>
+                    <NavLink key={link.href} to={link.href}>
+                      {link.title}
+                    </NavLink>
                   );
                 })}
             </div>

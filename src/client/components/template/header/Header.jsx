@@ -6,7 +6,7 @@ import {
   Language as LanguageIcon,
 } from '@material-ui/icons';
 import Logo from '../../../assets/icon/logo.svg';
-import PAGES from '../../../stores/constant/template/header/pages';
+import PAGES from '../../../constants/menuList';
 
 const Header = () => {
   return (
@@ -19,7 +19,11 @@ const Header = () => {
             </Grid>
             <Grid item xs={5}>
               {PAGES.menu.menuList.map(m => {
-                return <NavLink to={m.href}>{m.title}</NavLink>;
+                return (
+                  <NavLink key={m.href} to={m.href}>
+                    {m.title}
+                  </NavLink>
+                );
               })}
             </Grid>
             <Grid item xs={5}>

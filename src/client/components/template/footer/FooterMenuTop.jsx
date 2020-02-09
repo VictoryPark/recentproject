@@ -1,7 +1,7 @@
 import React from 'react';
 import { Grid, Container, Typography } from '@material-ui/core';
 
-import PAGES from '../../../stores/constant/template/footer/pages';
+import PAGES from '../../../constants/footerList';
 import MenuTopSocialItem from './MenuTopSocialItem';
 import MenuTopItem from './MenuTopItem';
 import Logo from '../../../assets/icon/logo.svg';
@@ -18,7 +18,7 @@ const FooterMenuTop = () => {
             <Typography>
               {PAGES.footerTop.social.map(page => {
                 return (
-                  <MenuTopSocialItem menu={page} key={page.href} />
+                  <MenuTopSocialItem menu={page} key={page.title} />
                 );
               })}
             </Typography>
@@ -26,11 +26,11 @@ const FooterMenuTop = () => {
 
           {PAGES.footerTop.menuList.map((page, index) => {
             return (
-              <Grid item xs={index !== 2 ? 3 : 2}>
+              <Grid item xs={index !== 2 ? 3 : 2} key={page.title}>
                 <Typography>
                   <h4>{page.title}</h4>
                   {page.menu.map(pg => {
-                    return <MenuTopItem menu={pg} key={pg.href} />;
+                    return <MenuTopItem menu={pg} key={pg.title} />;
                   })}
                 </Typography>
               </Grid>

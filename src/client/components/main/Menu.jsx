@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Grid } from '@material-ui/core';
 import MenuList from './MenuList';
-import PAGES from '../../stores/constant/main/pages';
+import PAGES from '../../constants/menuList';
 
 const style = {
   minHeight: '800px',
@@ -14,7 +14,7 @@ function MenuComponent() {
       <Container>
         <Grid>
           {PAGES.menu.menuList.map(mn => {
-            return <MenuList menu={mn} />;
+            return <MenuList menu={mn} key={mn.title} />;
           })}
         </Grid>
       </Container>

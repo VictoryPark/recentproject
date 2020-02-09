@@ -1,8 +1,8 @@
 /* icons */
-import FbIcon from '../../../../assets/icon/facebook_col.svg';
-import ytIcon from '../../../../assets/icon/youtube_col.svg';
-import twIcon from '../../../../assets/icon/twitter_col.svg';
-import igIcon from '../../../../assets/icon/instagram_col.svg';
+import FbIcon from '../assets/icon/facebook_col.svg';
+import ytIcon from '../assets/icon/youtube_col.svg';
+import twIcon from '../assets/icon/twitter_col.svg';
+import igIcon from '../assets/icon/instagram_col.svg';
 
 const PAGES = {
   footerTop: {
