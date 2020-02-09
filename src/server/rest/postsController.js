@@ -1,4 +1,4 @@
-const postsService = require('./postsService').posts;
+const postsService = require('../service/postsService');
 
 const getPosts = (req, res) => {
   postsService.selectPosts(req, result => {

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import { getPosts } from '../../api/boardApi';
 
 class Posts extends Component {
   constructor() {
@@ -11,7 +12,7 @@ class Posts extends Component {
   }
 
   getPosts = async () => {
-    const { data } = await axios.get('/api/posts');
+    const { data } = await getPosts();
     this.setState({ posts: data, isLoading: false });
   };
 

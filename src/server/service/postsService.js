@@ -1,5 +1,5 @@
 const mysql = require('mysql');
-const { dbConfig } = require('../../env/devEnv');
+const { dbConfig } = require('../env/devEnv');
 
 const connection = mysql.createConnection(dbConfig);
 connection.connect();
@@ -25,4 +25,4 @@ const posts = {
   },
 };
 
-module.exports = { posts };
+module.exports = posts;

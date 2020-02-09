@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import '../app.css';
 import ReactImage from '../react.png';
+import { getTest } from '../api/productApi';
 
 export default class Test extends Component {
   constructor() {
@@ -14,7 +15,7 @@ export default class Test extends Component {
   }
 
   getUserName = async () => {
-    const { data } = await axios.get('/api/getusername');
+    const { data } = await getTest();
     this.setState({ username: data.username });
   };
 
