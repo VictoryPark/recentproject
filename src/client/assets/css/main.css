@@ -1,0 +1,12 @@
+.main .mainVisual {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 30px;
+}
+.main .mainVisual h1 {
+  margin: 0;
+}
+.main .mainVisual h5 {
+  margin: 0;
+}
