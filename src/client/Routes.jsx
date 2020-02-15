@@ -12,7 +12,6 @@ import Detail from './components/board/Detail';
 import Header from './components/template/header/Header';
 import Main from './components/main/Main';
 import Footer from './components/template/footer/Footer';
-import { DefaultLayout } from './containers';
 
 export default () => (
   <HashRouter>
@@ -27,7 +26,5 @@ export default () => (
       <Route path="/posts/:id" component={Detail} />
     </Switch>
     <Footer />
-
-    <Route path="/ui" component={DefaultLayout} />
   </HashRouter>
 );
