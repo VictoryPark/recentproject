@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Detail extends React.Component {
+class PostsDetail extends React.Component {
   componentDidMount() {
     const { location, history } = this.props;
     if (location.state === undefined) {
@@ -22,4 +22,4 @@ class Detail extends React.Component {
   }
 }
 
-export default Detail;
+export default PostsDetail;

@@ -6,8 +6,13 @@ import {
   Switch,
 } from 'react-router-dom';
 
-import { Posts, Test, Products, Login } from './components';
-import Detail from './components/board/Detail';
+import {
+  Posts,
+  PostsDetail,
+  Test,
+  Products,
+  Login,
+} from './components';
 
 import Header from './components/template/header/Header';
 import Main from './components/main/Main';
@@ -22,8 +27,8 @@ export default () => (
       <Route exact path="/main" component={Main} />
       <Route path="/test" component={Test} />
       <Route path="/products" component={Products} />
-      <Route exact path="/posts" component={Posts} />
-      <Route path="/posts/:id" component={Detail} />
+      <Route exact path="/post" component={Posts} />
+      <Route path="/post/:id" component={PostsDetail} />
     </Switch>
     <Footer />
   </HashRouter>
