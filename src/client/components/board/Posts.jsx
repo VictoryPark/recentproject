@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
+import { Link } from 'react-router-dom';
 import { getPosts } from '../../api/boardApi';
 
 class Posts extends Component {
@@ -29,7 +29,19 @@ class Posts extends Component {
         ) : (
           <div>
             {posts.map(post => (
-              <div>{post.post_content}</div>
+              <div key={post.ID}>
+                <Link
+                  to={{
+                    pathname: `/post/${post.ID}`,
+                    state: {
+                      title: post.post_title,
+                      content: post.post_content,
+                    },
+                  }}
+                >
+                  {post.post_title}
+                </Link>
+              </div>
             ))}
           </div>
         )}

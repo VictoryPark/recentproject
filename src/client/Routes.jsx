@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { Posts, Test, Products, Login } from './components';
+import Detail from './components/board/Detail';
 
 import Header from './components/template/header/Header';
 import Main from './components/main/Main';
@@ -22,7 +23,8 @@ export default () => (
       <Route exact path="/main" component={Main} />
       <Route path="/test" component={Test} />
       <Route path="/products" component={Products} />
-      <Route path="/post" component={Posts} />
+      <Route exact path="/posts" component={Posts} />
+      <Route path="/posts/:id" component={Detail} />
     </Switch>
     <Footer />
 
