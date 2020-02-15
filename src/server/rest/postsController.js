@@ -12,4 +12,10 @@ const getPost = (req, res) => {
   });
 };
 
-module.exports = { getPosts, getPost };
+const addPost = (req, res) => {
+  postsService.insertPost(req, result => {
+    res.json(result);
+  });
+};
+
+module.exports = { getPosts, getPost, addPost };

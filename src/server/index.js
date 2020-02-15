@@ -1,10 +1,14 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const os = require('os');
 // const path = require('path');
 const app = express();
 
 const posts = require('./routes/posts');
 const auth = require('./routes/auths');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const API = '/api';
 app.use(`${API}/posts`, posts);
